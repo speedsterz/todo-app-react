@@ -1,4 +1,4 @@
-import { KeyboardEventHandler, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { produce } from "immer";
 import { v4 as uuidv4 } from "uuid";
 import styles from "./Todo.module.css";
@@ -6,17 +6,15 @@ import style_light from "./Todo_light.module.css";
 import style_dark from "./Todo_dark.module.css";
 import iconSun from "../images/icon-sun.svg";
 import iconMoon from "../images/icon-moon.svg";
+import React from "react";
 
 interface object_list {
   job: string;
   active: boolean;
   id: string;
 }
-interface probs {
-  theme: (i: boolean) => void;
-}
 
-export const Todo = ({ theme }: probs) => {
+export const Todo = () => {
   const [todolist, setTodolist] = useState<object_list[]>([]);
   const [Darkmode, setDarkmode] = useState(false);
   const [Select, setSelect] = useState("All");
@@ -24,15 +22,19 @@ export const Todo = ({ theme }: probs) => {
   //Dark Mode
 
   // Add todo
-  const Check_todo = (e: KeyboardEventHandler) => {
-    if (e.key === "Enter" && e.target.value !== "") {
-      const obj = { job: e.target.value, active: true, id: uuidv4() };
+  const Check_todo = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter" && (e.target as HTMLInputElement).value !== "") {
+      const obj = {
+        job: (e.target as HTMLInputElement).value,
+        active: true,
+        id: uuidv4(),
+      };
       setTodolist(
         produce((draft) => {
           draft.push(obj);
         })
       );
-      e.target.value = "";
+      (e.target as HTMLInputElement).value = "";
     }
   };
 
@@ -78,7 +80,7 @@ export const Todo = ({ theme }: probs) => {
     }
   }, [Darkmode]);
 
-  let style_theme;
+  let style_theme: CSSModuleClasses;
   if (Darkmode) style_theme = style_dark;
   else style_theme = style_light;
 
@@ -92,7 +94,6 @@ export const Todo = ({ theme }: probs) => {
           className={styles.imgMode}
           onClick={() => {
             setDarkmode(!Darkmode);
-            theme(!Darkmode);
           }}
         />
       </div>
