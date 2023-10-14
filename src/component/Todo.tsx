@@ -6,6 +6,7 @@ import style_light from "./Todo_light.module.css";
 import style_dark from "./Todo_dark.module.css";
 import iconSun from "../images/icon-sun.svg";
 import iconMoon from "../images/icon-moon.svg";
+import iconCross from "../images/icon-cross.svg";
 import React from "react";
 
 interface object_list {
@@ -142,8 +143,8 @@ export const Todo = () => {
                 <img
                   onClick={() => remove(item)}
                   className="cross"
-                  src="./images/icon-cross.svg"
-                  alt=""
+                  src={iconCross}
+                  alt="remove icon"
                 />
               </div>
             </li>
