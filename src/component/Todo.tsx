@@ -142,7 +142,7 @@ export const Todo = () => {
                 <img
                   onClick={() => remove(item)}
                   className="cross"
-                  src="./src/images/icon-cross.svg"
+                  src="./images/icon-cross.svg"
                   alt=""
                 />
               </div>

@@ -74,7 +74,7 @@ body {
 }
 
 #dark {
-  background-image: url("./src/images/bg-desktop-dark.jpg");
+  background-image: url("./images/bg-desktop-dark.jpg");
   background-color: var(--clr-vd-blue);
 }
 #dark p {
@@ -82,7 +82,7 @@ body {
 }
 
 #light {
-  background-image: url("./src/images/bg-desktop-light.jpg");
+  background-image: url("./images/bg-desktop-light.jpg");
   background-color: var(--clr-lgb);
 }
 #light p {
@@ -119,10 +119,10 @@ li:hover .cross {
 }
 @media (max-width: 700px) {
   #dark {
-    background-image: url("./src/images/bg-mobile-dark.jpg");
+    background-image: url("./images/bg-mobile-dark.jpg");
   }
   #light {
-    background-image: url("./src/images/bg-mobile-light.jpg");
+    background-image: url("./images/bg-mobile-light.jpg");
   }
   .Ext {
     display: block !important;
