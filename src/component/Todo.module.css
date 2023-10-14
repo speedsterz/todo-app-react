@@ -1,0 +1,83 @@
+.container {
+  width: 90%;
+  max-width: 500px;
+  margin-top: 3rem;
+}
+.container * {
+  width: 100%;
+}
+
+.imgMode {
+  width: 30px;
+  height: 30px;
+}
+.imgMode:hover {
+  cursor: pointer;
+}
+
+.h1Style {
+  color: white;
+  font-weight: 700;
+}
+
+.todo_input {
+  border: none;
+  outline: none;
+}
+
+.todo_inputG {
+  margin-bottom: 2rem;
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+}
+
+.checkinput-active {
+  margin-right: 1rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+.checkinput-completed {
+  margin-right: 1rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-image: url("../images/icon-check.svg"),
+    linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.lastli {
+  font-size: 0.9rem;
+  opacity: 0.5;
+  text-align: center;
+}
+
+.TextCompleted {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.gap {
+  gap: 1rem;
+}
+.SelectModes *:hover {
+  cursor: pointer;
+}
+.SelectMode {
+  color: var(--clr-br-blue);
+  opacity: 1 !important;
+}
+
+.clearCompleted:hover {
+  cursor: pointer;
+}
+.SelectMode_mobile {
+  width: 30%;
+  margin-inline: auto;
+}
+.SelectMode_mobile * {
+  opacity: 0.6;
+}

@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:root {
+  /* light Theme */
+  --clr-br-blue: hsl(220, 98%, 61%);
+  --clr-vl-gray: hsl(0, 0%, 98%);
+  --clr-vl-gray-blue: hsl(236, 33%, 92%);
+  --clr-lgb: hsl(233, 11%, 84%);
+  --clr-d-gb: hsl(236, 9%, 61%);
+  --clr-vd-gb: hsl(235, 19%, 35%);
+  /* Dark Theme */
+  --clr-vd-blue: hsl(235, 21%, 11%);
+  --clr-dd-blue: hsl(235, 24%, 19%);
+  --clr-lgb-2: hsl(234, 39%, 85%);
+  --clr-lgb-21: hsl(236, 33%, 92%);
+  --clr-d-gb2: hsl(234, 11%, 52%);
+  --clr-vdgb2: hsl(233, 14%, 35%);
+  --clr-vdgb21: hsl(237, 14%, 26%);
+}
+body {
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100vw;
+  font-family: "Josefin Sans", sans-serif !important;
+  background-color: red;
+}
+
+#root {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+#dark {
+  background-image: url("./src/images/bg-desktop-dark.jpg");
+  background-color: var(--clr-vd-blue);
+}
+#dark p {
+  color: white;
+}
+
+#light {
+  background-image: url("./src/images/bg-desktop-light.jpg");
+  background-color: var(--clr-lgb);
+}
+#light p {
+  color: black;
+}
+
+.cross {
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  display: none;
+}
+
+li:hover .cross {
+  display: block;
+}
+
+.Ext {
+  margin-top: 1rem;
+  border-radius: 5px;
+  padding: 0.5rem 1rem !important;
+  display: none !important;
+}
+#light .Ext {
+  background-color: white;
+}
+#dark li {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+#dark li:last-child {
+  border-bottom: none;
+}
+@media (max-width: 700px) {
+  #dark {
+    background-image: url("./src/images/bg-mobile-dark.jpg");
+  }
+  #light {
+    background-image: url("./src/images/bg-mobile-light.jpg");
+  }
+  .Ext {
+    display: block !important;
+  }
+  .Ext1 {
+    visibility: hidden !important;
+  }
+}

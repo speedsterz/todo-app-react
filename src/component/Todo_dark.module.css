@@ -1,0 +1,11 @@
+.bgColor {
+  background-color: var(--clr-dd-blue) !important;
+  color: white !important;
+}
+.bgColor [type="text"] {
+  background-color: var(--clr-dd-blue);
+  color: white;
+}
+.checkinput-active {
+  border: 1px solid white !important;
+}
